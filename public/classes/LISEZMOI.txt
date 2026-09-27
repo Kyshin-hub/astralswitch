@@ -1,0 +1,11 @@
+Déposez ici une image par classe (png, jpg, jpeg ou webp, ~128x128).
+Les PNG transparents s'affichent tels quels, les autres en médaillon rond.
+Nom du fichier = nom de la classe en minuscules, sans accent :
+
+iop.png        cra.png        eniripsa.png   sadida.png
+osamodas.png   enutrof.png    sram.png       xelor.png
+ecaflip.png    feca.png       sacrieur.png   pandawa.png
+roublard.png   zobal.png      steamer.png    eliotrope.png
+huppermage.png ouginak.png    forgelance.png
+
+Sans image, AstralSwitch affiche un médaillon coloré avec l'initiale.

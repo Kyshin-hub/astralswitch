@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.45" r="0.7">
+      <stop offset="0" stop-color="#2a1646"/>
+      <stop offset="0.55" stop-color="#140c22"/>
+      <stop offset="1" stop-color="#0a0710"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e98bff" stop-opacity="0.85"/>
+      <stop offset="0.45" stop-color="#9b4dff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#6a2cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="star" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.28" stop-color="#fbe6ff"/>
+      <stop offset="0.62" stop-color="#e27bff"/>
+      <stop offset="1" stop-color="#9d45ff"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7b3cff"/>
+      <stop offset="0.5" stop-color="#ff7ad9"/>
+      <stop offset="1" stop-color="#b86bff"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <clipPath id="front"><rect x="0" y="512" width="1024" height="512"/></clipPath>
+  </defs>
+
+  <rect x="32" y="32" width="960" height="960" rx="210" fill="url(#bg)"/>
+  <rect x="32" y="32" width="960" height="960" rx="210" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="6"/>
+
+  <!-- Halo -->
+  <circle cx="512" cy="512" r="360" fill="url(#glow)"/>
+
+  <!-- Anneau (moitié arrière) -->
+  <g transform="rotate(-28 512 512)">
+    <ellipse cx="512" cy="512" rx="330" ry="112" fill="none" stroke="url(#ring)" stroke-width="26" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- Étoile à 4 branches -->
+  <path d="M512 196 C538 452 572 486 828 512 C572 538 538 572 512 828 C486 572 452 538 196 512 C452 486 486 452 512 196 Z"
+        fill="#f39bff" filter="url(#blur)" opacity="0.9"/>
+  <path d="M512 196 C538 452 572 486 828 512 C572 538 538 572 512 828 C486 572 452 538 196 512 C452 486 486 452 512 196 Z"
+        fill="url(#star)"/>
+
+  <!-- Anneau (moitié avant, par-dessus l'étoile) -->
+  <g transform="rotate(-28 512 512)">
+    <ellipse cx="512" cy="512" rx="330" ry="112" fill="none" stroke="url(#ring)" stroke-width="26" clip-path="url(#front)" filter="url(#blur)" opacity="0.8"/>
+    <ellipse cx="512" cy="512" rx="330" ry="112" fill="none" stroke="url(#ring)" stroke-width="22" clip-path="url(#front)"/>
+    <circle cx="842" cy="512" r="20" fill="#ffffff"/>
+  </g>
+
+  <!-- Petites étincelles -->
+  <path d="M780 250 C784 276 790 282 816 286 C790 290 784 296 780 322 C776 296 770 290 744 286 C770 282 776 276 780 250 Z" fill="#ffd6fb"/>
+  <path d="M262 744 C265 762 269 766 287 769 C269 772 265 776 262 794 C259 776 255 772 237 769 C255 766 259 762 262 744 Z" fill="#d7b8ff"/>
+</svg>
